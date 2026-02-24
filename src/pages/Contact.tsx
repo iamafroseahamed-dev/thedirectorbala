@@ -35,15 +35,39 @@ export default function Contact() {
 
   const onSubmit = async (data: FormData) => {
     setSubmitting(true);
-    const { error } = await supabase.from("contact_messages").insert([{
-      name: data.name,
-      email: data.email,
-      message: data.message,
-    }]);
-    setSubmitting(false);
-    if (!error) {
+    try {
+      // Save to database
+      const { error: dbError } = await supabase.from("contact_messages").insert([{
+        name: data.name,
+        email: data.email,
+        message: data.message,
+      }]);
+
+      if (dbError) throw dbError;
+
+      // Send email notification
+      const emailResponse = await fetch("/api/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: data.name,
+          email: data.email,
+          message: data.message,
+        }),
+      });
+
+      if (!emailResponse.ok) {
+        console.error("Failed to send email notification");
+      }
+
+      setSubmitting(false);
       setSuccess(true);
       reset();
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      setSubmitting(false);
     }
   };
 
