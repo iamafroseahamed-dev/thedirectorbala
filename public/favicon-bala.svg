@@ -22,18 +22,28 @@
   <line x1="0" y1="56" x2="512" y2="56" stroke="#c9a84c" stroke-width="0.8" opacity="0.5"/>
   <line x1="0" y1="456" x2="512" y2="456" stroke="#c9a84c" stroke-width="0.8" opacity="0.5"/>
 
-  <!-- Letter B — thin weight, centered -->
-  <text
-    x="256"
-    y="330"
-    text-anchor="middle"
-    font-family="Georgia, serif"
-    font-size="240"
-    font-weight="300"
-    fill="#f5f0e8"
-    letter-spacing="-4"
-  >B</text>
+  <!-- Letter B — path-based, centered -->
+  <path d="
+    M 180 120 L 180 390
+    L 280 390
+    Q 340 390 340 340
+    Q 340 290 285 280
+    L 285 275
+    Q 330 265 330 220
+    Q 330 120 270 120
+    Z
+    M 215 152 L 265 152
+    Q 297 152 297 215
+    Q 297 260 260 260
+    L 215 260
+    Z
+    M 215 288 L 270 288
+    Q 305 288 305 335
+    Q 305 360 270 360
+    L 215 360
+    Z
+  " fill="#f5f0e8" fill-rule="evenodd"/>
 
   <!-- Subtle gold underline -->
-  <line x1="176" y1="360" x2="336" y2="360" stroke="#c9a84c" stroke-width="1.5" opacity="0.7"/>
+  <line x1="176" y1="405" x2="336" y2="405" stroke="#c9a84c" stroke-width="1.5" opacity="0.7"/>
 </svg>
