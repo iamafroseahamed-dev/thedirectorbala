@@ -1,10 +1,9 @@
 import { Link } from "react-router-dom";
-import { Instagram, Youtube, Twitter } from "lucide-react";
+import { Instagram, Youtube } from "lucide-react";
 
 const socialLinks = [
-  { href: "https://instagram.com", label: "Instagram", Icon: Instagram },
-  { href: "https://youtube.com", label: "YouTube", Icon: Youtube },
-  { href: "https://twitter.com", label: "Twitter / X", Icon: Twitter },
+  { href: "https://www.instagram.com/thedirectorbala?igsh=YXZ2aXp2dmJqZnRv&utm_source=qr", label: "Instagram", Icon: Instagram },
+  { href: "https://youtube.com/@houseofeleven11?si=QYfTt56pilRFXTZ7", label: "YouTube", Icon: Youtube },
 ];
 
 interface FooterProps {

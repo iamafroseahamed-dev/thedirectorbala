@@ -53,9 +53,9 @@ export default function Navbar() {
           to="/"
           className="font-body uppercase tracking-[0.22em] leading-none"
           style={{
-            color: "hsl(var(--foreground))",
+            color: "hsl(var(--gold))",
             fontWeight: 200,
-            fontSize: "clamp(0.65rem, 1.6vw, 0.8rem)",
+            fontSize: "clamp(0.55rem, 1.2vw, 0.65rem)",
             letterSpacing: "0.22em",
             textShadow: isTransparent ? "0 2px 20px hsl(0 0% 0% / 0.5)" : "none",
             transition: "text-shadow 0.55s ease, color 0.55s ease",

@@ -4,7 +4,7 @@ import { supabase } from "@/lib/supabase";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
-import { Mail, ExternalLink, Download } from "lucide-react";
+import { Mail, ExternalLink, Download, Youtube, Instagram } from "lucide-react";
 import { Link } from "react-router-dom";
 
 interface SiteSettings {
@@ -172,7 +172,7 @@ export default function About() {
             {/* Contact card */}
             <Reveal delay={0.1}>
               <div className="mt-6 border border-border/50 p-6 space-y-4">
-                <p className="font-body text-[10px] tracking-[0.3em] uppercase text-muted-foreground">Contact</p>
+                <p className="font-body text-[10px] tracking-[0.3em] uppercase text-muted-foreground">Contact & Follow</p>
                 <Link
                   to="/contact"
                   className="flex items-center gap-3 font-body text-sm text-foreground hover:text-gold transition-colors"
@@ -180,6 +180,28 @@ export default function About() {
                   <Mail size={14} className="shrink-0" style={{ color: "hsl(var(--gold))" }} />
                   Send a Message
                 </Link>
+                
+                {/* Social Media Links */}
+                <div className="pt-2 border-t border-border/30 space-y-3">
+                  <a
+                    href="https://youtube.com/@houseofeleven11?si=QYfTt56pilRFXTZ7"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 font-body text-sm text-foreground hover:text-gold transition-colors"
+                  >
+                    <Youtube size={14} className="shrink-0" style={{ color: "hsl(var(--gold))" }} />
+                    YouTube
+                  </a>
+                  <a
+                    href="https://www.instagram.com/thedirectorbala?igsh=YXZ2aXp2dmJxZnRv&utm_source=qr"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 font-body text-sm text-foreground hover:text-gold transition-colors"
+                  >
+                    <Instagram size={14} className="shrink-0" style={{ color: "hsl(var(--gold))" }} />
+                    Instagram
+                  </a>
+                </div>
               </div>
             </Reveal>
           </div>

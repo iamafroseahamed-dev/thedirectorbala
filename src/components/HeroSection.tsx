@@ -250,7 +250,7 @@ export default function HeroSection({ settings }: HeroSectionProps) {
           style={{
             fontFamily: "'Outfit', sans-serif",
             fontWeight: 200,
-            fontSize: "clamp(5.5rem, 18vw, 15rem)",
+            fontSize: "clamp(3.5rem, 12vw, 10rem)",
             letterSpacing: "0.18em",
             textShadow: "0 4px 80px hsl(0 0% 0% / 0.5), 0 0 120px hsl(var(--gold) / 0.06)",
             color: "hsl(var(--foreground))",
