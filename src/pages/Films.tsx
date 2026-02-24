@@ -48,9 +48,6 @@ export default function Films() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
           >
-            <p className="font-body text-[10px] tracking-[0.45em] uppercase mb-4" style={{ color: "hsl(var(--gold))" }}>
-              Complete Works
-            </p>
             <h1
               className="font-display font-bold text-foreground leading-none"
               style={{ fontSize: "clamp(3rem, 7vw, 6rem)", letterSpacing: "-0.02em" }}

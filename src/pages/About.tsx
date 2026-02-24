@@ -114,31 +114,6 @@ export default function About() {
               </div>
             </Reveal>
 
-            {/* Divider */}
-            <div className="border-t border-border/40" />
-
-            {/* Career highlights grid */}
-            <Reveal delay={0.1}>
-              <div>
-                <p className="font-body text-[10px] tracking-[0.35em] uppercase text-muted-foreground mb-8">Career Highlights</p>
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-px bg-border/30">
-                  {[
-                    { label: "Director", value: directorName },
-                    { label: "Genre", value: "Drama · Thriller" },
-                    { label: "Based In", value: "India" },
-                  ].map(({ label, value }) => (
-                    <div key={label} className="bg-background p-6">
-                      <p className="font-body text-[9px] tracking-[0.3em] uppercase text-muted-foreground mb-2">{label}</p>
-                      <p className="font-display text-lg font-bold text-foreground">{value}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </Reveal>
-
-            {/* Divider */}
-            <div className="border-t border-border/40" />
-
             {/* CTA row */}
             <Reveal delay={0.12}>
               <div className="flex flex-wrap items-center gap-6">
