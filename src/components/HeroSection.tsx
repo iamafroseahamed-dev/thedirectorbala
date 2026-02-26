@@ -241,17 +241,17 @@ export default function HeroSection({ settings }: HeroSectionProps) {
         style={{ y: textY, opacity: textOpacity }}
         className="absolute inset-0 flex flex-col items-center justify-center text-center px-6"
       >
-        {/* Director name — cursive */}
+        {/* Director name — elegant signature cursive */}
         <motion.h1
           initial={{ opacity: 0, y: 10, filter: "blur(8px)" }}
           animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           transition={{ duration: 1.8, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
           className="select-none leading-none"
           style={{
-            fontFamily: "'Great Vibes', cursive",
+            fontFamily: "'Allura', cursive",
             fontWeight: 400,
-            fontSize: "clamp(1rem, 3vw, 2.8rem)",
-            letterSpacing: "0.08em",
+            fontSize: "clamp(1.2rem, 3.5vw, 3.2rem)",
+            letterSpacing: "0.06em",
             textShadow: "0 4px 80px hsl(0 0% 0% / 0.5), 0 0 120px hsl(var(--gold) / 0.06)",
             color: "hsl(var(--foreground))",
           }}
