@@ -248,7 +248,7 @@ export default function HeroSection({ settings }: HeroSectionProps) {
           transition={{ duration: 1.8, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
           className="select-none leading-none"
           style={{
-            fontFamily: "'Allura', cursive",
+            fontFamily: "'Great Vibes', cursive",
             fontWeight: 400,
             fontSize: "clamp(1.2rem, 3.5vw, 3.2rem)",
             letterSpacing: "0.06em",

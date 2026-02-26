@@ -80,22 +80,6 @@ export default function About() {
           {/* ═══ LEFT — Biography & Content ═══ */}
           <div className="space-y-16 order-2 lg:order-1">
 
-            {/* Pull quote / tagline */}
-            {settings?.tagline && (
-              <Reveal>
-                <blockquote
-                  className="font-cinematic text-2xl md:text-3xl xl:text-4xl leading-snug font-medium border-l-2 pl-8"
-                  style={{
-                    color: "hsl(var(--gold))",
-                    borderColor: "hsl(var(--gold) / 0.5)",
-                    fontStyle: "italic",
-                  }}
-                >
-                  "{settings.tagline}"
-                </blockquote>
-              </Reveal>
-            )}
-
             {/* Biography */}
             <Reveal delay={0.08}>
               <div>
