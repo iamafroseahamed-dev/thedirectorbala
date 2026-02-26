@@ -26,7 +26,7 @@ export default function Footer({ directorName = "Bala" }: FooterProps) {
             letterSpacing: "0.18em",
           }}
         >
-          Balachandar Rajasekharan
+          © {new Date().getFullYear()}
         </Link>
 
         {/* Social links */}

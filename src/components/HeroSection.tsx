@@ -241,17 +241,17 @@ export default function HeroSection({ settings }: HeroSectionProps) {
         style={{ y: textY, opacity: textOpacity }}
         className="absolute inset-0 flex flex-col items-center justify-center text-center px-6"
       >
-        {/* Director name — thin cinematic weight */}
+        {/* Director name — cursive */}
         <motion.h1
           initial={{ opacity: 0, y: 10, filter: "blur(8px)" }}
           animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           transition={{ duration: 1.8, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
           className="select-none leading-none"
           style={{
-            fontFamily: "'Outfit', sans-serif",
-            fontWeight: 200,
-            fontSize: "clamp(0.83rem, 2.67vw, 2.33rem)",
-            letterSpacing: "0.18em",
+            fontFamily: "'Great Vibes', cursive",
+            fontWeight: 400,
+            fontSize: "clamp(1rem, 3vw, 2.8rem)",
+            letterSpacing: "0.08em",
             textShadow: "0 4px 80px hsl(0 0% 0% / 0.5), 0 0 120px hsl(var(--gold) / 0.06)",
             color: "hsl(var(--foreground))",
           }}
@@ -259,20 +259,14 @@ export default function HeroSection({ settings }: HeroSectionProps) {
           {settings?.director_name?.toUpperCase() || "BALA"}
         </motion.h1>
 
-        {/* Gold line + tagline */}
+        {/* Gold line */}
         <motion.div
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, delay: 1.1, ease: "easeOut" }}
-          className="mt-8 flex flex-col items-center gap-4"
+          className="mt-8"
         >
           <div className="gold-line w-20 mx-auto" />
-          <p
-            className="font-body tracking-[0.5em] uppercase text-[11px] md:text-xs"
-            style={{ color: "hsl(var(--muted-foreground))", fontWeight: 300 }}
-          >
-            {settings?.tagline || "Cinematic Storyteller"}
-          </p>
         </motion.div>
       </motion.div>
 

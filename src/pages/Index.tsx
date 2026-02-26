@@ -54,9 +54,9 @@ export default function Index() {
     <>
       <Helmet>
         <title>{settings?.director_name || "Bala"} — Film Director</title>
-        <meta name="description" content={settings?.tagline || "Cinematic storyteller and award-winning film director"} />
+        <meta name="description" content="Award-winning film director and cinematic works portfolio." />
         <meta property="og:title" content={`${settings?.director_name || "Bala"} — Film Director`} />
-        <meta property="og:description" content={settings?.tagline || "Cinematic storyteller"} />
+        <meta property="og:description" content="Award-winning film director and cinematic works portfolio." />
         <meta property="og:type" content="website" />
       </Helmet>
 
