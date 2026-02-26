@@ -53,7 +53,7 @@ export default function FilmCard({ film, index = 0 }: FilmCardProps) {
               </p>
             )}
             <span className="inline-flex items-center gap-2 font-body text-[10px] tracking-[0.3em] uppercase" style={{ color: "hsl(var(--gold))" }}>
-              View Film
+              Film Details
               <span className="transition-transform duration-300 group-hover:translate-x-1.5">→</span>
             </span>
           </div>
@@ -91,7 +91,7 @@ export default function FilmCard({ film, index = 0 }: FilmCardProps) {
 
         {/* Meta */}
         <div className="mt-4 space-y-1">
-          <h3 className="font-display text-base font-bold text-foreground group-hover:text-gold transition-colors duration-300 leading-snug">
+          <h3 className="font-cinematic text-base font-semibold text-foreground group-hover:text-gold transition-colors duration-300 leading-snug">
             {film.title}
           </h3>
           {film.release_year && (

@@ -1,8 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&family=Great+Vibes:wght@400&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap');
 
 /* Cinematic dark theme design system — all colors HSL */
 
@@ -83,6 +83,12 @@
 
   .font-body {
     font-family: 'Outfit', sans-serif;
+  }
+
+  .font-cinematic {
+    font-family: 'Great Vibes', cursive;
+    font-weight: 400;
+    letter-spacing: 0.08em;
   }
 
   .text-gold {

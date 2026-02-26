@@ -488,7 +488,7 @@ function FilmForm({
             )}
             <label className={`flex items-center gap-2 cursor-pointer border border-dashed border-border hover:border-gold/50 px-4 py-3 text-sm text-muted-foreground hover:text-foreground transition-colors ${uploading.gallery ? "opacity-60 pointer-events-none" : ""}`}>
               <Upload size={14} />
-              {uploading.gallery ? "Uploading..." : "Upload film stills (multiple)"}
+              {uploading.gallery ? "Uploading..." : "Upload Gallery (multiple)"}
               <input type="file" accept="image/*" multiple className="hidden"
                 onChange={(e) => e.target.files && handleGalleryUpload(e.target.files)}
                 disabled={uploading.gallery}

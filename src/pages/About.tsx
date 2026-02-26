@@ -65,7 +65,7 @@ export default function About() {
           <p className="font-body text-[10px] tracking-[0.45em] uppercase mb-4" style={{ color: "hsl(var(--gold))" }}>
             The Director
           </p>
-          <h1 className="font-display font-bold text-foreground leading-none"
+          <h1 className="font-cinematic font-semibold text-foreground leading-none"
             style={{ fontSize: "clamp(3.5rem, 9vw, 8rem)", letterSpacing: "-0.02em" }}>
             {directorName}
           </h1>
@@ -84,7 +84,7 @@ export default function About() {
             {settings?.tagline && (
               <Reveal>
                 <blockquote
-                  className="font-display text-2xl md:text-3xl xl:text-4xl leading-snug font-medium border-l-2 pl-8"
+                  className="font-cinematic text-2xl md:text-3xl xl:text-4xl leading-snug font-medium border-l-2 pl-8"
                   style={{
                     color: "hsl(var(--gold))",
                     borderColor: "hsl(var(--gold) / 0.5)",

@@ -89,7 +89,7 @@ export default function Contact() {
             className="mb-14"
           >
             <p className="font-body text-xs text-gold tracking-[0.4em] uppercase mb-3">Get In Touch</p>
-            <h1 className="font-display text-5xl md:text-6xl font-bold text-foreground">Contact</h1>
+            <h1 className="font-cinematic text-5xl md:text-6xl font-semibold text-foreground">Contact</h1>
             <div className="gold-line w-20 mt-5" />
           </motion.div>
 
@@ -101,7 +101,7 @@ export default function Contact() {
               className="text-center py-16"
             >
               <CheckCircle size={56} className="text-gold mx-auto mb-4" />
-              <h2 className="font-display text-2xl font-bold text-foreground mb-2">Message Sent</h2>
+              <h2 className="font-cinematic text-2xl font-semibold text-foreground mb-2">Message Sent</h2>
               <p className="font-body text-muted-foreground">Thank you for reaching out. I'll be in touch soon.</p>
               <button
                 onClick={() => setSuccess(false)}

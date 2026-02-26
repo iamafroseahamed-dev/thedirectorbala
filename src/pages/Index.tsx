@@ -78,7 +78,7 @@ export default function Index() {
               Selected Works
             </p>
             <h2
-              className="font-display font-bold text-foreground leading-none"
+              className="font-cinematic font-semibold text-foreground leading-none"
               style={{ fontSize: "clamp(2.5rem, 6vw, 5rem)", letterSpacing: "-0.02em" }}
             >
               Featured Films

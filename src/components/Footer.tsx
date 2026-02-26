@@ -44,10 +44,6 @@ export default function Footer({ directorName = "Bala" }: FooterProps) {
             </a>
           ))}
         </div>
-
-        <p className="font-body text-xs text-muted-foreground tracking-widest uppercase">
-          © {new Date().getFullYear()} {directorName}
-        </p>
       </div>
     </footer>
   );

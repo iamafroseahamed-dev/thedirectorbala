@@ -468,7 +468,7 @@ export default function FilmDetail() {
 
           {/* ── TITLE BLOCK ── */}
           <Reveal className="mb-14">
-            <h1 className="font-display text-5xl md:text-7xl xl:text-8xl text-foreground leading-none tracking-wide">
+            <h1 className="font-cinematic text-5xl md:text-7xl xl:text-8xl text-foreground leading-none tracking-wide">
               {film.title}
             </h1>
             <div className="flex flex-wrap items-center gap-x-5 gap-y-2 mt-4">
@@ -548,10 +548,10 @@ export default function FilmDetail() {
                 </Reveal>
               )}
 
-              {/* Film Stills Gallery */}
+              {/* Gallery */}
               {galleryImages.length > 0 && (
                 <Reveal delay={0.08}>
-                  <SectionLabel>Film Stills</SectionLabel>
+                  <SectionLabel>Gallery</SectionLabel>
                   <div className={`grid gap-2 ${
                     galleryImages.length === 1 ? "grid-cols-1" :
                     galleryImages.length <= 2 ? "grid-cols-2" :
@@ -658,7 +658,7 @@ export default function FilmDetail() {
                     )}
                     {film.gallery_images && film.gallery_images.length > 0 && (
                       <div className="flex justify-between items-center">
-                        <span className="font-body text-xs text-muted-foreground uppercase tracking-wider">Film Stills</span>
+                        <span className="font-body text-xs text-muted-foreground uppercase tracking-wider">Gallery</span>
                         <span className="font-body text-sm text-foreground">{film.gallery_images.length}</span>
                       </div>
                     )}

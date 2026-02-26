@@ -49,7 +49,7 @@ export default function Films() {
             transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
           >
             <h1
-              className="font-display font-bold text-foreground leading-none"
+              className="font-cinematic font-semibold text-foreground leading-none"
               style={{ fontSize: "clamp(3rem, 7vw, 6rem)", letterSpacing: "-0.02em" }}
             >
               Filmography
