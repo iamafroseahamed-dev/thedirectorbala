@@ -256,7 +256,7 @@ export default function HeroSection({ settings }: HeroSectionProps) {
             color: "hsl(var(--foreground))",
           }}
         >
-          {settings?.director_name?.toUpperCase() || "BALA"}
+          {settings?.director_name || "Bala"}
         </motion.h1>
 
         {/* Gold line */}

@@ -55,7 +55,7 @@ export default function Navbar() {
           style={{
             color: "hsl(var(--gold))",
             fontWeight: 200,
-            fontSize: "clamp(1rem, 2vw, 1.2rem)",
+            fontSize: "clamp(0.75rem, 1.4vw, 0.95rem)",
             letterSpacing: "0.22em",
             textShadow: isTransparent ? "0 2px 20px hsl(0 0% 0% / 0.5)" : "none",
             transition: "text-shadow 0.55s ease, color 0.55s ease",
