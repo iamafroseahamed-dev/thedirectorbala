@@ -27,6 +27,33 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Great+Vibes:wght@400&display=swap" rel="stylesheet" />
+
+    <!-- Replace flaticon with BALA icon -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Find and replace XNo5Ab flaticon class
+        const flaticons = document.querySelectorAll('.XNo5Ab, [src*="flaticon"], img[class*="flaticon"]');
+        flaticons.forEach(img => {
+          img.src = '/favicon-bala.svg';
+          img.alt = 'BALA';
+          img.style.width = '32px';
+          img.style.height = '32px';
+        });
+      });
+
+      // Also run on any DOM mutations to catch dynamically added elements
+      const observer = new MutationObserver(() => {
+        const flaticons = document.querySelectorAll('.XNo5Ab, [src*="flaticon"], img[class*="flaticon"]');
+        flaticons.forEach(img => {
+          if (img.src.includes('flaticon')) {
+            img.src = '/favicon-bala.svg';
+            img.alt = 'BALA';
+          }
+        });
+      });
+
+      observer.observe(document.body, { childList: true, subtree: true });
+    </script>
   </head>
 
   <body>
