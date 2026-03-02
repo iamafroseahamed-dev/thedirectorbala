@@ -26,7 +26,7 @@ export default function Footer({ directorName = "Bala" }: FooterProps) {
             letterSpacing: "0.18em",
           }}
         >
-          © {new Date().getFullYear()} House if eleven11
+          © {new Date().getFullYear()} House of eleven11
         </Link>
 
         {/* Social links */}
