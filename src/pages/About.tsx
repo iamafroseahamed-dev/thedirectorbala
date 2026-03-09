@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet-async";
 import { supabase } from "@/lib/supabase";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Testimonials from "@/components/Testimonials";
 import { motion } from "framer-motion";
 import { Mail, ExternalLink, Download, Youtube, Instagram } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -27,6 +28,41 @@ function Reveal({ children, delay = 0, className = "" }: { children: React.React
     </motion.div>
   );
 }
+
+const testimonials = [
+  {
+    author: "Nicky Murray",
+    content: "As an actress and a crew member, I've encountered many directors with a wide variety of styles, skills and personalities - you're never sure what you will encounter! Bala brings a quiet brilliance to the set: confident and creative in his vision; kind, respectful and communicative to cast and crew, and he is also flexible and adaptable to the ever-changing filming environment. He is an absolute pleasure to work with!"
+  },
+  {
+    author: "Arian Vojdani",
+    content: "Bala is a hard worker who is dedicated to his craft and learning, and it's good to work alongside with him as the director and looking after the team. Working alongside Bala has been a pleasure, as he likes to take feedback, learning, and also take ideas for his projects that can explore more of the film and what can work and not work in the moment on screen."
+  },
+  {
+    author: "Hayley Wills",
+    content: "I thoroughly enjoyed working with Bala. The environment he created was collaborative and engaging, and as an actor I felt supported, comfortable and part of the creative process. I look forward to working on more projects together."
+  },
+  {
+    author: "Gerson Rocha",
+    content: "Working with Director Bala was a great experience. He created a professional, collaborative environment on set and made the whole process very smooth and enjoyable. I truly appreciated his direction on set and the care he put into the project."
+  },
+  {
+    author: "Peter Waterman",
+    content: "I was involved in a film shoot for Bala and I must say I was totally impressed. There were 20 cast and crew involved and I marvelled at the ease with which Bala communicated with every individual and gave clear instructions as to his vision. He is an excellent networker and motivator and the story that he wrote had a positive message that was expressed with an impressive array of actors. As a Producer the day was well organised and ran smoothly. Bala is an emerging Director who has unlimited potential to achieve great things in Film."
+  },
+  {
+    author: "Joel Yap",
+    content: "I've had the pleasure of working with Bala, and even though he is relatively new to directing, his dedication and passion for storytelling are immediately clear. What stands out most about Bala is his work ethic and how quickly he learns and adapts. He takes feedback on board, constantly refining his approach, and is always looking for ways to improve both his craft and the final result of the project. His passion for the stories he tells is evident in the way he collaborates with others and commits himself to bringing ideas to life."
+  },
+  {
+    author: "Alexa Jones",
+    content: "Bala has such a calm presence. This instantly quells any doubt or anxiety about how a scene is to be played out by me. He helps me be a better actor. I'm in good hands when I work with him."
+  },
+  {
+    author: "Zayn Yousufzai",
+    content: "Working with Bala was an inspiring experience. He has a clear creative vision and a genuine passion for film making, that shows in the way he approaches every project. It was a pleasure being part of the process and collaborating with him."
+  }
+];
 
 export default function About() {
   const [settings, setSettings] = useState<SiteSettings | null>(null);
@@ -191,6 +227,8 @@ export default function About() {
           </div>
         </div>
       </main>
+
+      <Testimonials testimonials={testimonials} />
 
       <Footer directorName={directorName} />
     </>

@@ -249,7 +249,7 @@ export default function HeroSection({ settings }: HeroSectionProps) {
           className="select-none leading-none uppercase tracking-wide"
           style={{
             fontFamily: "'Bebas Neue', sans-serif",
-            fontWeight: 700,
+            fontWeight: 100,
             fontSize: "clamp(2.5rem, 6.5vw, 5.5rem)",
             letterSpacing: "0.08em",
             textShadow: "0 4px 80px hsl(0 0% 0% / 0.5), 0 0 120px hsl(var(--gold) / 0.06)",
@@ -268,6 +268,30 @@ export default function HeroSection({ settings }: HeroSectionProps) {
         >
           <div className="gold-line w-20 mx-auto" />
         </motion.div>
+      </motion.div>
+
+      {/* ── FILM FESTIVAL LAURELS ── */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1.2, delay: 1.8, ease: [0.22, 1, 0.36, 1] }}
+        className="absolute bottom-20 left-0 right-0 w-full px-4 md:px-8 lg:px-16 z-10 flex justify-center lg:justify-end"
+        style={{ pointerEvents: "none" }}
+      >
+        <figure className="w-full lg:w-auto max-w-full lg:max-w-[1050px]">
+          <img
+            src="/images/film_festival_laurels_combined.png"
+            alt="Film festival awards and nominations including Kodaikkanal International Film Festival, East Village New York Film Festival, Ugg Competition, and more"
+            loading="eager"
+            decoding="async"
+            className="w-full h-auto opacity-90 select-none"
+            style={{
+              filter: "drop-shadow(0 8px 24px hsl(0 0% 0% / 0.4))",
+              objectFit: "contain",
+            }}
+          />
+          <figcaption className="sr-only">Film festival laurels and awards</figcaption>
+        </figure>
       </motion.div>
 
       {/* ── SCROLL INDICATOR ── */}
