@@ -278,7 +278,7 @@ export default function HeroSection({ settings }: HeroSectionProps) {
         className="absolute bottom-20 left-0 right-0 w-full px-4 md:px-8 lg:px-16 z-10 flex justify-center"
         style={{ pointerEvents: "none" }}
       >
-        <figure className="w-full lg:w-auto max-w-[560px] lg:max-w-[600px]">
+        <figure className="w-full lg:w-auto max-w-[400px] lg:max-w-[440px]">
           <img
             src="/images/film_festival_laurels_combined.png"
             alt="Film festival awards and nominations including Kodaikkanal International Film Festival, East Village New York Film Festival, Ugg Competition, and more"
