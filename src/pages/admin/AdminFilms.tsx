@@ -658,7 +658,17 @@ export default function AdminFilms() {
   const [editing, setEditing] = useState<(Omit<FilmRecord, "id"> & { id?: string }) | null>(null);
 
   const fetchFilms = async () => {
-    const { data } = await supabase.from("films").select("*").order("order_index", { ascending: true });
+    const { data, error } = await supabase
+      .from("films")
+      .select("*")
+      .order("order_index", { ascending: true, nullsFirst: true })
+      .order("created_at", { ascending: false });
+    
+    if (error) {
+      console.error("Error fetching films:", error);
+      toast.error("Failed to load films: " + error.message);
+    }
+    
     setFilms((data as unknown as FilmRecord[]) || []);
     setLoading(false);
   };
