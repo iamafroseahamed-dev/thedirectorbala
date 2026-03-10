@@ -236,6 +236,29 @@ export default function HeroSection({ settings }: HeroSectionProps) {
         }}
       />
 
+      {/* ── WATERMARK BACKGROUND ── */}
+      <div
+        className="absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden"
+      >
+        <div
+          className="select-none"
+          style={{
+            fontFamily: "'Bebas Neue', sans-serif",
+            fontWeight: 100,
+            fontSize: "clamp(12rem, 40vw, 45rem)",
+            letterSpacing: "0.15em",
+            textTransform: "uppercase",
+            color: "hsl(var(--foreground))",
+            opacity: 0.065,
+            transform: "rotate(-15deg)",
+            whiteSpace: "nowrap",
+            textShadow: "0 0 40px hsl(0 0% 0% / 0.3)",
+          }}
+        >
+          {settings?.director_name || "Bala"}
+        </div>
+      </div>
+
       {/* ── HERO CONTENT ── */}
       <motion.div
         style={{ y: textY, opacity: textOpacity }}
