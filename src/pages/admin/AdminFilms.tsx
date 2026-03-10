@@ -71,6 +71,7 @@ interface FilmRecord {
   trailer_url: string | null;
   festival_awards: string | null;
   release_year: number | null;
+  order_index: number | null;
   is_featured: boolean | null;
   pitch_deck_url: string | null;
   gallery_images: string[] | null;
@@ -102,7 +103,7 @@ const emptyCredits: Credits = {
 const emptyFilm: Omit<FilmRecord, "id"> = {
   title: "", slug: "", short_description: "", full_description: "",
   thumbnail_url: null, trailer_url: "", festival_awards: "",
-  release_year: new Date().getFullYear(), is_featured: false,
+  release_year: new Date().getFullYear(), order_index: 0, is_featured: false,
   pitch_deck_url: null, gallery_images: [],
   credits: { ...emptyCredits }, reviews: [], articles: [],
 };
@@ -412,6 +413,17 @@ function FilmForm({
             />
           </div>
           <div className="space-y-1.5">
+            <Label className="text-xs uppercase tracking-wider text-muted-foreground">Display Order</Label>
+            <Input
+              type="number"
+              value={form.order_index ?? ""}
+              onChange={(e) => set("order_index", parseInt(e.target.value) || 0)}
+              placeholder="0"
+              className="bg-secondary border-border"
+            />
+            <p className="text-[11px] text-muted-foreground/60">Lower numbers appear first</p>
+          </div>
+          <div className="space-y-1.5">
             <Label className="text-xs uppercase tracking-wider text-muted-foreground">Subtitle</Label>
             <Input
               value={form.short_description ?? ""}
@@ -646,7 +658,7 @@ export default function AdminFilms() {
   const [editing, setEditing] = useState<(Omit<FilmRecord, "id"> & { id?: string }) | null>(null);
 
   const fetchFilms = async () => {
-    const { data } = await supabase.from("films").select("*").order("release_year", { ascending: false });
+    const { data } = await supabase.from("films").select("*").order("order_index", { ascending: true });
     setFilms((data as unknown as FilmRecord[]) || []);
     setLoading(false);
   };
@@ -680,6 +692,7 @@ export default function AdminFilms() {
       trailer_url: film.trailer_url,
       festival_awards: film.festival_awards,
       release_year: film.release_year,
+      order_index: film.order_index ?? 0,
       is_featured: film.is_featured,
       pitch_deck_url: film.pitch_deck_url,
       gallery_images: film.gallery_images ?? [],
@@ -755,6 +768,7 @@ export default function AdminFilms() {
               <Table>
                 <TableHeader>
                   <TableRow className="border-border">
+                    <TableHead className="font-body text-xs uppercase tracking-wider text-muted-foreground">Order</TableHead>
                     <TableHead className="font-body text-xs uppercase tracking-wider text-muted-foreground">Title</TableHead>
                     <TableHead className="font-body text-xs uppercase tracking-wider text-muted-foreground">Year</TableHead>
                     <TableHead className="font-body text-xs uppercase tracking-wider text-muted-foreground">Reviews</TableHead>
@@ -766,6 +780,7 @@ export default function AdminFilms() {
                 <TableBody>
                   {films.map((film) => (
                     <TableRow key={film.id} className="border-border hover:bg-secondary/50">
+                      <TableCell className="font-body text-sm text-gold font-medium">{film.order_index ?? "—"}</TableCell>
                       <TableCell className="font-body text-sm text-foreground">{film.title}</TableCell>
                       <TableCell className="font-body text-sm text-muted-foreground">{film.release_year}</TableCell>
                       <TableCell className="font-body text-xs text-muted-foreground">

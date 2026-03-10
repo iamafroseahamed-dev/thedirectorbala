@@ -13,6 +13,7 @@ interface Film {
   short_description: string | null;
   thumbnail_url: string | null;
   release_year: number | null;
+  order_index: number | null;
   is_featured: boolean | null;
 }
 
@@ -23,8 +24,8 @@ export default function Films() {
   useEffect(() => {
     supabase
       .from("films")
-      .select("id, title, slug, short_description, thumbnail_url, release_year, is_featured")
-      .order("release_year", { ascending: false })
+      .select("id, title, slug, short_description, thumbnail_url, release_year, order_index, is_featured")
+      .order("order_index", { ascending: true })
       .then(({ data }) => {
         if (data) setFilms(data as Film[]);
         setLoading(false);

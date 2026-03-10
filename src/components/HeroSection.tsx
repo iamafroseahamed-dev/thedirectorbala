@@ -236,29 +236,6 @@ export default function HeroSection({ settings }: HeroSectionProps) {
         }}
       />
 
-      {/* ── WATERMARK BACKGROUND ── */}
-      <div
-        className="absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden"
-      >
-        <div
-          className="select-none"
-          style={{
-            fontFamily: "'Bebas Neue', sans-serif",
-            fontWeight: 100,
-            fontSize: "clamp(12rem, 40vw, 45rem)",
-            letterSpacing: "0.15em",
-            textTransform: "uppercase",
-            color: "hsl(var(--foreground))",
-            opacity: 0.065,
-            transform: "rotate(-15deg)",
-            whiteSpace: "nowrap",
-            textShadow: "0 0 40px hsl(0 0% 0% / 0.3)",
-          }}
-        >
-          {settings?.director_name || "Bala"}
-        </div>
-      </div>
-
       {/* ── HERO CONTENT ── */}
       <motion.div
         style={{ y: textY, opacity: textOpacity }}
@@ -273,10 +250,10 @@ export default function HeroSection({ settings }: HeroSectionProps) {
           style={{
             fontFamily: "'Bebas Neue', sans-serif",
             fontWeight: 100,
-            fontSize: "clamp(2.5rem, 6.5vw, 5.5rem)",
-            letterSpacing: "0.08em",
-            textShadow: "0 4px 80px hsl(0 0% 0% / 0.5), 0 0 120px hsl(var(--gold) / 0.06)",
-            color: "hsl(var(--foreground))",
+            fontSize: "clamp(3.5rem, 8.5vw, 7rem)",
+            letterSpacing: "0.15em",
+            color: "hsl(var(--foreground) / 0.12)",
+            textShadow: "0 8px 40px hsl(0 0% 0% / 0.15)",
           }}
         >
           {settings?.director_name || "Bala"}

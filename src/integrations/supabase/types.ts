@@ -48,6 +48,7 @@ export type Database = {
           gallery_images: string[] | null
           id: string
           is_featured: boolean | null
+          order_index: number | null
           pitch_deck_url: string | null
           release_year: number | null
           reviews: Json | null
@@ -66,6 +67,7 @@ export type Database = {
           gallery_images?: string[] | null
           id?: string
           is_featured?: boolean | null
+          order_index?: number | null
           pitch_deck_url?: string | null
           release_year?: number | null
           reviews?: Json | null
@@ -84,6 +86,7 @@ export type Database = {
           gallery_images?: string[] | null
           id?: string
           is_featured?: boolean | null
+          order_index?: number | null
           pitch_deck_url?: string | null
           release_year?: number | null
           reviews?: Json | null
